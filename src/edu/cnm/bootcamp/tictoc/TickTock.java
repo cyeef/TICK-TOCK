@@ -24,7 +24,7 @@ public class TickTock {
   }
 
   synchronized void tock(boolean running) {
-    if (running) {
+    if (!running) {
       state = "tocked";
       notify();
       return;
